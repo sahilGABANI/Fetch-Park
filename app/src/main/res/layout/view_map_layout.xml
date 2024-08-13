@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/_3sdp"
+    app:cardUseCompatPadding="true"
+    app:strokeColor="@color/grey_DFE7EB"
+    app:strokeWidth="@dimen/_1sdp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/_5sdp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/headingTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:fontFamily="@font/inter_semibold"
+            android:text="@string/tracking"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_5ssp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/zoomMapAppCompatTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:drawableStart="@drawable/ic_zoom_icon"
+            android:drawablePadding="@dimen/_3sdp"
+            android:fontFamily="@font/inter_regular"
+            android:text="@string/zoom_map"
+            android:textColor="@color/red"
+            android:textSize="@dimen/_5ssp"
+            tools:ignore="RelativeOverlap" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/one_dp"
+            android:layout_below="@id/headingTextView"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:background="@color/grey_DFE7EB" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/mapImageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:minHeight="@dimen/_70sdp"
+            android:scaleType="fitXY"
+            android:src="@drawable/map"
+            app:riv_corner_radius="@dimen/_3sdp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/destinationAppCompatTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mapImageView"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@font/inter_medium"
+            android:text="@string/destination"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_5ssp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/destinationLocationAppCompatTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/destinationAppCompatTextView"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:drawableStart="@drawable/ic_location_small_icon"
+            android:drawablePadding="@dimen/_3ssp"
+            android:fontFamily="@font/inter_regular"
+            android:includeFontPadding="false"
+            android:text="@string/_3101_s_grand_blvd_st_louis_mo"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_5ssp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/messageToDriverAppCompatTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/destinationLocationAppCompatTextView"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@font/inter_medium"
+            android:text="@string/message_to_driver"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_5ssp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textAppCompatTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/messageToDriverAppCompatTextView"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:drawableStart="@drawable/ic_msg_icon"
+            android:drawablePadding="@dimen/_3ssp"
+            android:fontFamily="@font/inter_regular"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:text="@string/please_call_me_and_i_ll_meet_you"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_5ssp" />
+
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>

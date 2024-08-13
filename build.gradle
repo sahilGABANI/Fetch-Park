@@ -1,0 +1,27 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext {
+        dagger_version = '2.43.2'
+        rxJava_version = '2.2.20'
+        rxAndroid_version = '2.1.1'
+        rxbinding_version = '3.1.0'
+        retrofit_version = '2.9.0'
+        retrofit_rxJava_version = '2.9.0'
+        okhttp_version = '4.9.0'
+
+    }
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+plugins {
+    id 'com.android.application' version '7.2.1' apply false
+    id 'com.android.library' version '7.2.1' apply false
+    id 'org.jetbrains.kotlin.android' version '1.7.10' apply false
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

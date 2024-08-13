@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_F0F4F6"
+    android:orientation="vertical"
+    tools:context=".ui.userstore.checkout.CheckOutFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|top"
+                android:fontFamily="@font/inter_medium"
+                android:text="@string/checkout"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_8ssp" />
+
+            <LinearLayout
+                android:id="@+id/loyaltyCardDialogLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="@dimen/_135sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bg_rounded_white"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/_4sdp"
+                    android:paddingVertical="@dimen/_10sdp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_scan_loyalty_card" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:fontFamily="@font/inter_semibold"
+                        android:includeFontPadding="false"
+                        android:text="@string/loyalty_card"
+                        android:textAlignment="center"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_7ssp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:fontFamily="@font/inter_regular"
+                        android:includeFontPadding="false"
+                        android:text="@string/would_you_like_to_scan_your_loyalty_card"
+                        android:textAlignment="center"
+                        android:textColor="@color/grey"
+                        android:textSize="@dimen/_6ssp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/scanCardButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:backgroundTint="@color/button_color"
+                        android:fontFamily="@font/inter_medium"
+                        android:includeFontPadding="false"
+                        android:letterSpacing="0.01"
+                        android:minWidth="@dimen/_50sdp"
+                        android:paddingHorizontal="@dimen/_6sdp"
+                        android:paddingVertical="@dimen/_4sdp"
+                        android:text="@string/scan_card"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_7ssp"
+                        app:cornerRadius="@dimen/_4sdp"
+                        app:icon="@drawable/scan_card_button_icon"
+                        app:iconGravity="start"
+                        app:iconTint="@color/white" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/skipMaterialCardView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_1sdp"
+                        android:minWidth="@dimen/_60sdp"
+                        android:minHeight="@dimen/_21sdp"
+                        app:cardCornerRadius="@dimen/_4sdp"
+                        app:cardUseCompatPadding="true"
+                        app:strokeColor="@color/color_DFE7EB"
+                        app:strokeWidth="@dimen/one_dp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/inter_medium"
+                            android:text="@string/skip"
+                            android:textAllCaps="true"
+                            android:textColor="@color/red"
+                            android:textSize="@dimen/_6ssp" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/joinLoyaltyProgramLinearLayout"
+                    android:layout_width="@dimen/_135sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_1sdp"
+                    android:background="@drawable/bg_rounded_small_corner_radius_white"
+                    android:minHeight="@dimen/_20sdp"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/_4sdp"
+                    android:paddingVertical="@dimen/_6sdp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:drawableStart="@drawable/ic_trophy_icon"
+                        android:drawablePadding="@dimen/_2sdp"
+                        android:fontFamily="@font/inter_medium"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="@string/join_loyalty_program"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/_7ssp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/checkoutPartLinearLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <include
+                        android:id="@+id/personalInformationLayout"
+                        layout="@layout/view_user_personal_information"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_3sdp" />
+
+                    <include
+                        android:id="@+id/tipTheCrewLayout"
+                        layout="@layout/view_tip_the_crew"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:id="@+id/orderSpecialInstructions"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@drawable/order_list_background"
+                        android:gravity="center"
+                        android:padding="@dimen/_5sdp"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_marginTop="@dimen/_3sdp"
+                            android:fontFamily="@font/inter_medium"
+                            android:text="@string/order_special_instructions_optional"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_5ssp" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/giftPackagingInputLayout"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_3sdp"
+                            android:minHeight="@dimen/_20sdp"
+                            app:boxCornerRadiusBottomEnd="@dimen/_4sdp"
+                            app:boxCornerRadiusBottomStart="@dimen/_4sdp"
+                            app:boxCornerRadiusTopEnd="@dimen/_4sdp"
+                            app:boxCornerRadiusTopStart="@dimen/_4sdp"
+                            app:hintEnabled="false">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/orderSpecialInstructionsEditText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/order_special_instructions"
+                                android:imeOptions="actionDone"
+                                android:includeFontPadding="false"
+                                android:inputType="text"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/hintColor"
+                                android:textCursorDrawable="@color/hintColor"
+                                android:textSize="@dimen/_5ssp" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/loyaltyCardLinearLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@drawable/order_list_background"
+                        android:gravity="center"
+                        android:padding="@dimen/_2sdp">
+
+                        <include
+                            android:id="@+id/loyaltyCardLayout"
+                            layout="@layout/view_loyalty_card"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@drawable/order_list_background"
+                        android:padding="@dimen/_2sdp">
+
+                        <include
+                            android:id="@+id/addPromocodeLayout"
+                            layout="@layout/view_add_promocode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@drawable/order_list_background"
+                        android:padding="@dimen/_2sdp">
+
+                        <include
+                            android:id="@+id/addGiftCardLayout"
+                            layout="@layout/view_add_gift_card"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llCredits"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@drawable/order_list_background"
+                        android:padding="@dimen/_2sdp"
+                        android:visibility="gone">
+
+                        <include
+                            android:id="@+id/userCreditsLayout"
+                            layout="@layout/view_add_credits_card"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

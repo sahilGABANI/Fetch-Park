@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/menuTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_6sdp"
+        android:fontFamily="@font/inter_medium"
+        android:paddingVertical="@dimen/_8sdp"
+        tools:text="@string/orders"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_7ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvLocation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:fontFamily="@font/inter_medium"
+        android:paddingVertical="@dimen/_8sdp"
+        android:minWidth="@dimen/_80sdp"
+        tools:text="@string/orders"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_7ssp"
+        app:layout_constraintStart_toEndOf="@id/menuTextView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvLocationAddress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:fontFamily="@font/inter_regular"
+        android:paddingVertical="@dimen/_8sdp"
+        tools:text="@string/orders"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_7ssp"
+        app:layout_constraintStart_toEndOf="@id/tvLocation"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

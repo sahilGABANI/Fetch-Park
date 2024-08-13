@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_1sdp"
+        android:layout_marginEnd="@dimen/_1sdp"
+        android:background="@color/color_F0F4F6"
+        android:paddingBottom="@dimen/_3sdp">
+
+        <RelativeLayout
+            android:id="@+id/orderDetailLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@drawable/order_list_item_background"
+            android:minHeight="@dimen/_24sdp"
+            android:paddingStart="@dimen/_5sdp"
+            android:paddingEnd="@dimen/_3sdp">
+
+            <LinearLayout
+                android:id="@+id/orderIdLinearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:gravity="start"
+                android:minWidth="@dimen/_80sdp"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_2sdp"
+                android:paddingStart="@dimen/_1sdp">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/productImageView"
+                    android:layout_width="@dimen/_18sdp"
+                    android:layout_height="@dimen/_18sdp"
+                    app:riv_corner_radius="@dimen/_2sdp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/demo_box_img" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/productNameTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:maxLines="2"
+                    android:fontFamily="@font/circular_std_book"
+                    android:includeFontPadding="false"
+                    android:maxWidth="@dimen/_46sdp"
+                    android:text="@string/_6_cookies"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/_5ssp" />
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/descriptionTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_toEndOf="@id/orderIdLinearLayout"
+                android:includeFontPadding="false"
+                android:maxWidth="@dimen/_120sdp"
+                android:minWidth="@dimen/_120sdp"
+                android:paddingStart="@dimen/one_dp"
+                android:paddingEnd="@dimen/_5sdp"
+                android:text="@string/_text"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_5ssp"
+                app:fontFamily="@font/circular_std_book" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/priceTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_toEndOf="@id/descriptionTextView"
+                android:fontFamily="@font/circular_std_book"
+                android:includeFontPadding="false"
+                android:minWidth="@dimen/_32sdp"
+                android:textColor="@color/red"
+                android:textSize="@dimen/_5ssp"
+                android:text="12/31/2024" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/two_dp"
+                tools:ignore="RtlSymmetry">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/menuStateTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|end"
+                    android:fontFamily="@font/circular_std_book"
+                    android:gravity="start"
+                    android:includeFontPadding="false"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_5ssp"
+                    android:text="@string/available" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/stateSwitchCompat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/headingTextView"
+                    android:layout_marginStart="@dimen/_3sdp"
+                    android:background="@null"
+                    android:thumb="@drawable/checkbox_thumb"
+                    app:track="@drawable/checkbox_track" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</merge>

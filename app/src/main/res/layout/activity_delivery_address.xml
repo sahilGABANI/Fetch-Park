@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/screen_background"
+    android:orientation="vertical"
+    tools:context=".ui.userstore.deliveryaddress.DeliveryAddressActivity">
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/semiTransparentImageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/ic_semi_transparent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/headingTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="@font/inter_bold"
+        android:gravity="center"
+        android:text="@string/delivery_address"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_10ssp" />
+
+    <LinearLayout
+        android:id="@+id/toolbarLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/headingTextView"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/giftPackagingInputLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:minWidth="@dimen/_150sdp"
+            android:maxWidth="@dimen/_150sdp"
+            android:minHeight="@dimen/_20sdp"
+            app:boxCornerRadiusBottomEnd="@dimen/_4sdp"
+            app:boxCornerRadiusBottomStart="@dimen/_4sdp"
+            app:boxCornerRadiusTopEnd="@dimen/_4sdp"
+            app:boxCornerRadiusTopStart="@dimen/_4sdp"
+            app:hintEnabled="false">
+
+            <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                android:id="@+id/nameEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawSelectorOnTop="true"
+                android:dropDownAnchor="@id/nameEditText"
+                android:hint="@string/name"
+                android:imeOptions="actionDone"
+                android:includeFontPadding="false"
+                android:inputType="text"
+                android:minHeight="@dimen/_20sdp"
+                android:paddingHorizontal="@dimen/_5sdp"
+                android:popupBackground="@drawable/order_list_background"
+                android:textColor="@color/black"
+                android:textColorHint="@color/hintColor"
+                android:textCursorDrawable="@color/hintColor"
+                android:textSize="@dimen/_5ssp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/confirmMaterialButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:backgroundTint="@color/button_color"
+        android:enabled="false"
+        android:fontFamily="@font/inter_medium"
+        android:layout_toEndOf="@id/toolbarLinearLayout"
+        android:layout_alignTop="@id/toolbarLinearLayout"
+        android:includeFontPadding="false"
+        android:letterSpacing="0.02"
+        android:minHeight="@dimen/_25sdp"
+        android:text="@string/confirm"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_8ssp"
+        app:cornerRadius="@dimen/_4sdp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvLocationAddress"
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/order_list_background"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:layout_alignStart="@id/toolbarLinearLayout"
+        android:layout_below="@id/toolbarLinearLayout"/>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/closeButtonMaterialCardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="@dimen/_5sdp"
+        app:cardCornerRadius="@dimen/_2sdp"
+        app:cardUseCompatPadding="true"
+        app:strokeColor="@color/color_ADC2CC"
+        app:strokeWidth="1dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/_6sdp"
+            android:layout_height="@dimen/_6sdp"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/_3sdp"
+            android:src="@drawable/ic_close_icon"
+            android:tint="@color/red" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+</RelativeLayout>
